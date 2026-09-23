@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="记录技术学习、科研过程与可复用的思考。">
+  <title>用最小实验验证一个新工具 · ZCL · 技术与科研笔记</title>
+  
+  <link rel="canonical" href="https://zcl3.github.io/2026/09/22/%E7%94%A8%E6%9C%80%E5%B0%8F%E5%AE%9E%E9%AA%8C%E9%AA%8C%E8%AF%81%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B7%A5%E5%85%B7/">
+  <meta property="og:title" content="用最小实验验证一个新工具 · ZCL · 技术与科研笔记">
+  <meta property="og:description" content="记录技术学习、科研过程与可复用的思考。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://zcl3.github.io/2026/09/22/%E7%94%A8%E6%9C%80%E5%B0%8F%E5%AE%9E%E9%AA%8C%E9%AA%8C%E8%AF%81%E4%B8%80%E4%B8%AA%E6%96%B0%E5%B7%A5%E5%85%B7/">
+  <meta name="twitter:card" content="summary">
+  <link rel="alternate" href="/atom.xml" title="ZCL · 技术与科研笔记" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css">
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body class="site-shell">
+    <a class="skip-link" href="#main-content">跳至正文</a>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <header class="site-header" data-nav-open="false">
+  <div class="site-header__inner">
+    <a class="site-brand" href="/">
+      <span class="site-brand__mark" aria-hidden="true">Z</span>
+      <span><strong>ZCL</strong><small>技术与科研笔记</small></span>
+    </a>
+    <div class="site-header__actions">
+      <button class="command-toggle" type="button" data-command-toggle aria-expanded="false" aria-controls="command-panel">搜索 <kbd>⌘ K</kbd></button>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">菜单</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换至浅色主题">浅色</button>
+    </div>
+    <nav id="site-nav" class="site-nav" data-nav-menu aria-label="主导航">
+      
+        <a href="/">首页</a>
+      
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a>
+      
+        <a href="/categories/%E7%A7%91%E7%A0%94%E7%AC%94%E8%AE%B0/">科研笔记</a>
+      
+        <a href="/tags/">标签</a>
+      
+        <a href="/about/">关于</a>
+      
+      <a class="site-nav__github" href="https://github.com/zcl3" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+  <div id="command-panel" class="command-panel" data-command-panel hidden aria-label="快捷导航">
+    <div class="command-panel__inner">
+      <p>快捷导航</p>
+      
+        <a href="/">首页<span aria-hidden="true">→</span></a>
+      
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习<span aria-hidden="true">→</span></a>
+      
+        <a href="/categories/%E7%A7%91%E7%A0%94%E7%AC%94%E8%AE%B0/">科研笔记<span aria-hidden="true">→</span></a>
+      
+        <a href="/tags/">标签<span aria-hidden="true">→</span></a>
+      
+        <a href="/about/">关于<span aria-hidden="true">→</span></a>
+      
+      <a href="https://github.com/zcl3" target="_blank" rel="noreferrer">打开 GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+
+    <main id="main-content" class="site-main">
+      
+
+<article class="article-layout">
+  <header class="article-header">
+    <p class="section-kicker">技术学习</p>
+    <h1>用最小实验验证一个新工具</h1>
+    <p class="article-summary">在把一个新工具放进工作流之前，先用可撤销的小实验验证它是否真的解决问题。</p>
+    <div class="article-header__meta">
+
+
+<div class="post-meta">
+  <span>技术学习</span>
+  <time datetime="2026-09-22T01:30:00.000Z">2026-09-22</time>
+  <span>1 分钟阅读</span>
+  
+    <span class="post-meta__tags"><a href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">#学习方法</a><a href="/tags/%E5%B7%A5%E5%85%B7%E5%AE%9E%E8%B7%B5/">#工具实践</a></span>
+  
+</div>
+</div>
+  </header>
+
+  <div class="article-body-grid">
+    
+<aside class="article-toc" aria-label="文章目录">
+  <h2>本页目录</h2>
+  
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%86%99%E4%B8%8B%E5%9F%BA%E7%BA%BF"><span class="toc-text">先写下基线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E9%AA%8C%E8%AF%81%E4%B8%80%E4%B8%AA%E5%81%87%E8%AE%BE"><span class="toc-text">只验证一个假设</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A9%E5%AE%9E%E9%AA%8C%E5%8F%AF%E4%BB%A5%E6%92%A4%E9%94%80"><span class="toc-text">让实验可以撤销</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E5%86%B3%E5%AE%9A%E4%B9%9F%E5%86%99%E4%B8%8B%E6%9D%A5"><span class="toc-text">把决定也写下来</span></a></li></ol>
+  
+</aside>
+
+    <div class="article-content"><p>每次看到新工具，最容易发生的事是把它直接塞进正在赶的任务里。这样得到的往往不是结论，而是一段很难解释的摩擦：到底是工具本身不合适，还是自己没有学会用？</p>
+<p>更稳妥的做法是先设计一个最小实验。它不追求展示工具的全部能力，只回答一个足够具体的问题。</p>
+<h2 id="先写下基线"><a href="#先写下基线" class="headerlink" title="先写下基线"></a>先写下基线</h2><p>先描述不使用新工具时的当前做法：需要几步、最容易在哪一步出错、最终产物是什么。基线不是为了精确计时，而是为了避免“感觉更快”成为唯一判断。</p>
+<p>例如，若要评估一个文档生成工具，可以先写下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">任务：把一份 Markdown 笔记整理成可发布页面</span><br><span class="line">当前过程：检查格式、生成、预览、修改</span><br><span class="line">可观察结果：是否减少重复检查，是否仍能定位错误</span><br></pre></td></tr></table></figure>
+
+<h2 id="只验证一个假设"><a href="#只验证一个假设" class="headerlink" title="只验证一个假设"></a>只验证一个假设</h2><p>不要在第一次尝试时同时改变编辑器、构建工具和发布流程。一次只保留一个问题，例如：</p>
+<blockquote>
+<p>这个工具能否让 Markdown 格式错误更早暴露，而不增加额外的发布步骤？</p>
+</blockquote>
+<p>假设越清楚，失败也越有价值。它说明的不是“工具不行”，而是“在这个条件下，它没有解决预期问题”。</p>
+<h2 id="让实验可以撤销"><a href="#让实验可以撤销" class="headerlink" title="让实验可以撤销"></a>让实验可以撤销</h2><p>最小实验应该能被轻易删除或绕开。使用副本、测试分支或独立样例，不要先改动正式配置。这样即使结论是否定的，也不会留下难以追踪的环境差异。</p>
+<p>一个实用的顺序是：</p>
+<ol>
+<li>选一个真实但低风险的样例。</li>
+<li>设定一个可观察的成功标准。</li>
+<li>完成一次从输入到输出的完整流程。</li>
+<li>记录阻碍点，而不是只记录最终感觉。</li>
+<li>决定保留、继续试验或停止使用。</li>
+</ol>
+<h2 id="把决定也写下来"><a href="#把决定也写下来" class="headerlink" title="把决定也写下来"></a>把决定也写下来</h2><p>工具评估的产物不只是“采用”或“不采用”。还可以是“只用于某一类任务”或“等到某个限制被解决再看”。记录这个决定，下一次看到类似工具时，就有了可复用的起点。</p>
+<p>这里的例子只是一个通用框架。工具是否适合，仍要放回自己的任务、团队约束和维护成本中判断。</p>
+</div>
+  </div>
+
+  <nav class="article-nav" aria-label="相邻文章">
+  
+    <span></span>
+  
+  
+    <a href="/2026/09/18/%E6%8A%8A%E8%B4%9F%E7%BB%93%E6%9E%9C%E5%86%99%E6%88%90%E4%B8%8B%E4%B8%80%E6%AD%A5%E7%A0%94%E7%A9%B6%E8%AF%81%E6%8D%AE/"><span>下一篇 →</span><strong>把负结果写成下一步研究证据</strong></a>
+  
+</nav>
+
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div>
+    <strong>ZCL · 技术与科研笔记</strong>
+    <p>记录问题、验证过程和可复用的答案。</p>
+  </div>
+  <div class="site-footer__links">
+    <a href="https://github.com/zcl3" target="_blank" rel="noreferrer">GitHub</a>
+    <a href="/atom.xml">RSS</a>
+  </div>
+</footer>
+
+    <script src="/js/theme.js"></script>
+  </body>
+</html>
