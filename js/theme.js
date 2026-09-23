@@ -49,16 +49,18 @@
     if (event.key === 'Escape') setCommandOpen(false);
   });
 
-  if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
+  if (!reduceMotion && window.matchMedia('(pointer: fine)').matches && document.querySelector('[data-cursor-snake]')) {
     let frame = 0;
-    body.dataset.cursorGlow = 'true';
+    body.dataset.cursorSnake = 'false';
     window.addEventListener('pointermove', ({ clientX, clientY }) => {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         root.style.setProperty('--pointer-x', clientX + 'px');
         root.style.setProperty('--pointer-y', clientY + 'px');
+        body.dataset.cursorSnake = 'true';
       });
     }, { passive: true });
+    window.addEventListener('blur', () => { body.dataset.cursorSnake = 'false'; });
   }
 
   if (!reduceMotion && 'IntersectionObserver' in window) {
