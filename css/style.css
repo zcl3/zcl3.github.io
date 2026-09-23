@@ -250,6 +250,7 @@ html[data-reveal="true"] [data-reveal].is-revealed { opacity: 1; transform: tran
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
   .cursor-snake { display: none; }
+  body[data-cursor-snake="true"] { cursor: auto; }
   html[data-reveal="true"] [data-reveal] { opacity: 1; transform: none; }
 }
 

@@ -51,7 +51,6 @@
 
   if (!reduceMotion && window.matchMedia('(pointer: fine)').matches && document.querySelector('[data-cursor-snake]')) {
     let frame = 0;
-    body.dataset.cursorSnake = 'false';
     window.addEventListener('pointermove', ({ clientX, clientY }) => {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
