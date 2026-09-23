@@ -232,6 +232,17 @@ html[data-reveal="true"] [data-reveal].is-revealed { opacity: 1; transform: tran
 .project-showcase__actions { display: flex; min-width: 140px; flex-direction: column; align-items: flex-end; justify-content: space-between; gap: 20px; }
 .project-showcase__status { color: var(--accent-3); font: 0.68rem/1.2 "JetBrains Mono", Consolas, monospace; }
 
+@media (pointer: fine) {
+  body[data-cursor-snake="true"] { cursor: none; }
+  body[data-cursor-snake="true"] a,
+  body[data-cursor-snake="true"] button,
+  body[data-cursor-snake="true"] summary { cursor: none; }
+  body[data-cursor-snake="true"] input,
+  body[data-cursor-snake="true"] textarea,
+  body[data-cursor-snake="true"] select,
+  body[data-cursor-snake="true"] [contenteditable="true"] { cursor: text; }
+}
+
 @media (pointer: coarse) {
   .cursor-snake { display: none; }
 }
